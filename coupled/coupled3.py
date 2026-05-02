@@ -14,7 +14,7 @@ def create_nonadiabatic_pes(vx, vy):
     potentialEX = np.zeros((len(vx),len(vy)))
     Coupling = np.zeros((len(vx),len(vy)))
 
-    lam = 0.1
+    lam = 0.001
     gamma = 0.1
 
     for i in range(len(vx)):
@@ -83,7 +83,7 @@ m, hbar = 2000.0, 1.0
 
 # Initial Wavepacket Parameters
 x0, y0 = -0.5, 0.5   # Center of Well 2
-px0, py0 = 30.0, -30.0 # Momentum kick (adjust to "aim" the packet)
+px0, py0 = 25.0, 0 # Momentum kick (adjust to "aim" the packet)
 sigma = 0.2
 
 # Potential Energy Surface Data
