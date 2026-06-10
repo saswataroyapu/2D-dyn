@@ -30,9 +30,9 @@ def create_lvc_pes(vx, vy):
 
 
 def create_tanh_pes(vx, vy):
-    A = 0.05
+    A = 0.008
     k = 0.5
-    C = 0.01
+    C = 0.001
     D = 1E-2
     rcrit = 1.0
     sigma  = 10.0
@@ -64,7 +64,7 @@ mass, hbar = 2000.0, 1.0
 
 # Initial position and momentum
 x0, y0 = -4, -4  #Running for tanh potential
-px0, py0 = 15, 15
+px0, py0 = 0.5, 0.5
 
 # FIX 2: Correct Quantum Harmonic Oscillator ground state width scaling
 # sigma = sqrt(hbar / (m * omega))

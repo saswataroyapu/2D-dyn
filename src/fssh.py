@@ -10,10 +10,10 @@ omega1 = 7.743E-3
 omega2 = 6.680E-3
 a = 31.05
 
-def my_model_H(x, y):
-    A = 0.05
+def create_tanh_pes(x, y):
+    A = 0.008
     k = 0.5
-    C = 0.01
+    C = 0.001
     sigma = 10.0
     
     r = np.sqrt(x*x + y*y)
@@ -41,7 +41,7 @@ def create_lvc_pes(x, y):
 
 
 def get_diabatic_H(x, y):
-    return create_lvc_pes(x,y)
+    return create_tanh_pes(x,y)
 
 def get_diabatic_gradients(x, y, eps=1e-5):
     """Calculates numerical gradients of the diabatic matrix elements."""
@@ -83,18 +83,18 @@ def get_adiabatic_properties(x, y, U_old=None):
 # ==============================================================================
 # 2. RUNTIME SIMULATION PARAMETERS
 # ==============================================================================
-mass = 1.0
+mass = 2000.0
 hbar = 1.0
 dt = 0.01          
-tmax = 200.0
+tmax = 2000.0
 n_steps = int(tmax / dt)
 
 # Granucci-Persico Parameters
 C_edc = 1.0        
 
 # --- FIX B: Sample initial conditions from a normal distribution (\sigma = 1.0) ---
-r_mean = np.array([a / 2.0, 0])
-p_mean = np.array([0, 0])
+r_mean = np.array([-4.0, -4.0])
+p_mean = np.array([1, 1])
 
 r_coord = np.random.normal(loc=r_mean, scale=0.1)
 p_moment = np.random.normal(loc=p_mean, scale=0.1)
