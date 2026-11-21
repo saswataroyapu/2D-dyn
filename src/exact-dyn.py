@@ -58,7 +58,7 @@ def create_tanh_pes(vx, vy):
 N = 256
 L = 30.0
 dt = 0.01
-num_frames = 1000
+num_frames = 1600
 steps_per_frame = 200
 mass, hbar = 2000.0, 1.0 
 

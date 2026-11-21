@@ -57,14 +57,14 @@ def create_tanh_pes(vx, vy):
 # Parameters
 N = 256
 L = 30.0
-dt = 0.01
-num_frames = 1200
+dt = 0.1
+num_frames = 100
 steps_per_frame = 200
 mass, hbar = 2000.0, 1.0 
 
 # Initial position and momentum
 x0, y0 = -4, -4  #Running for tanh potential
-px0, py0 = 1.5, 1.5
+px0, py0 = 7.5, 7.5
 
 # FIX 2: Correct Quantum Harmonic Oscillator ground state width scaling
 sigma_init_x = 0.5

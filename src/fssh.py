@@ -85,8 +85,8 @@ def get_adiabatic_properties(x, y, U_old=None):
 # ==============================================================================
 mass = 2000.0
 hbar = 1.0
-dt = 0.01          
-tmax = 2000.0
+dt = 0.05          
+tmax = 3200.0
 n_steps = int(tmax / dt)
 
 # Granucci-Persico Parameters
@@ -94,7 +94,7 @@ C_edc = 1.0
 
 # --- FIX B: Sample initial conditions from a normal distribution (\sigma = 1.0) ---
 r_mean = np.array([-4.0, -4.0])
-p_mean = np.array([1, 1])
+p_mean = np.array([5.0, 5.0])
 
 r_coord = np.random.normal(loc=r_mean, scale=0.1)
 p_moment = np.random.normal(loc=p_mean, scale=0.1)
